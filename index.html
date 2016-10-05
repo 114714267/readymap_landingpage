@@ -1,0 +1,308 @@
+<html>
+<head>
+    <title>ReadyMap.org - Free base map for osgEarth - Pelican Mapping</title>
+    
+    <meta name="keywords" content="osgEarth, ReadyMap, OSG, OpenSceneGraph, 3D, maps, imagery, elevation, OpenStreetMap"/>
+    <meta name="description" content="Free base map for osgEarth developers"/>
+    
+    <script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-614378-5']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();     
+    </script>
+  
+    <style type="text/css">
+        body {
+            border: 0;
+            margin: 0 0 10 0;
+            font-family: arial, helvetica, sans;
+            color: #333;
+        }
+        
+        #header {
+            background-color: #2222bb;
+            border: 0;
+            margin: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        #title {
+            clear: both;
+            color: #333;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        #main {
+            clear: both;
+        }
+        
+        #content {
+            margin-left: auto;
+            margin-right: auto;
+            width: 850px;
+            border-top: #777 solid 1px;
+        }
+        
+        #content-left {
+            width: 60%;
+            float: left;
+        }
+        
+        #content-right {
+            width: 35%;
+            float: right;
+        }
+        
+        #donate {
+            background-color: #fee;
+            text-align: center;
+        }
+        
+        #paypal {
+            text-align: center;
+        }
+        
+        #main-map {
+            height: 200px;
+        }
+        
+        #data {        
+            background-color: #eef;
+        }
+        
+        #support {
+            clear: both;
+        }
+        
+        #readymap_com {
+            text-align: center;
+        }
+        
+        #osgearth_org {
+            text-align: center;
+        }
+        
+        #footer {
+            clear: both;
+            border-top: #777 dotted 1px;
+            color: #777;
+            font-size: smaller;
+            text-align: center;
+        }
+        
+        #boxes #dialog {
+            width: 375px;
+            height: 203px;
+        }
+        
+        h3 {
+            margin-left: 3px;
+            color: #339;
+        }
+        
+        li {
+            margin-bottom: .6em;
+        }
+        
+        .data-details {
+            font-size: smaller;
+            color: #777;
+        }
+        
+        a:link {
+            color: #339;
+        }
+        a:visited {
+            color: #339;
+        }
+        a:hover {
+            color: #f00;
+        }
+        a:active {
+            color: #339;
+        }
+        
+        .caption {
+            margin-top: 0;
+            font-size: 7pt;
+            text-align: right;
+        }
+        
+    </style>
+</head>
+
+<body>  
+    
+    <div id="header"> 
+        <a href="http://pelicanmapping.com">
+            <img src="pelican-2in-300dpi-inverse.png" width="150" border="0">
+        </a>
+    </div> 
+    
+    <div id="title">
+        <img src="readymap-400.png" width="400" border="0"/>
+        <h2>Free Data Service for ReadyMap and osgEarth Developers</h2>
+    </div>
+    
+    <div id="main">  
+        <div id="content">
+            <div id="content-left">
+                <p>
+                    <strong>ReadyMap.org</strong> is a free global base map data for
+                    <a href="http://readymap.com">ReadyMap</a> and <a href="http://osgearth.org">osgEarth</a> developers!
+                    This tiled, worldwide dataset of imagery, elevation, and street map data is a great base map that provides global context for
+                    your own local datasets. It works "out of the box" with osgEarth applications.
+                </p>
+                
+                <h3>How to Access</h3>
+                <p>The osgEarth 2.x distribution comes with a sample file called <strong>readymap.earth</strong>.
+                   This earth file points to the three data layers detailed on the right. It is also set up for caching.
+                   ReadyMap WebGL users can view the source of the examples to see how to access the server.
+                   The map on the right shows a preview of the data.</p>
+                   
+                <p>Not all areas are pre-tiled to the highest resolution. If you need higher resolution data for a particular area,
+                   let us know 
+                   (on the <a href="http://forum.osgearth.org">osgEarth forum</a> or on the
+                   <a href="http://forum.godzi.org">ReadyMap forum</a>) and we will generate it if 
+                   possible. All we ask is that you share your name, organization, and a little about your project.
+                   This information will help us to better understand the user base and improve our products in the future.</p>
+                
+                <h3>Terms and Conditions</h3>
+                <p>Please help us keep ReadyMap.org free by honoring the following terms.</p>
+                <ol>
+                    <li>This service is available for <strong>osgEarth or ReadyMap development and demonstration use only</strong>. 
+                    Use in a production system is prohibited.</li>
+                    <li>You may only use an osgEarth- or ReadyMap-based application to access this service.</li>
+                    <li>You may not redistribute, sell, or otherwise attempt to profit from the data in any way. All the data is derived from
+                        freely available sources, but we have put a great deal of effort into preparing it for cloud-based deployment.</li>
+                    <li>Bulk downloads of the data by any means are prohibited. We will block any IPs detected doing bulk downloads.</li>
+                    <li><strong>Enable caching</strong> in your osgEarth client. Not only will this speed up your application and allow you to
+                        run off-line, but it also reduces the load on the servers (and our hosting costs).</li>
+                    <li>We make <strong>no warranty</strong> with respect to uptime, availability,
+                        data quality, data accuracy, or anything else. Use at your own risk.</li>
+                    <li>We reserve the right to deny service to anyone, any time, for any reason. Please help us by honoring these terms
+                        and not abusing the service.</li>
+                    <li>Source data for this service is listed elsewhere on this page. It is your responsibility to be aware of and
+                        to comply with their terms and conditions.</li>
+                </ol>
+            </div>
+            
+                
+            <div id="content-right">
+            
+                <!--
+                <div id="donate">
+                    <h3>Support ReadyMap.org.</h3>
+                    <p>Your contributions will help keep the service available and free! Thank you for any support you or
+                       your organization can offer.</p>
+                    <div id="paypal">
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="K3M2UQTQUQZY6">
+                            <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </div>
+                </div>
+                -->
+
+                <div id="main-map">
+                </div>
+                <p class="caption"><a href="preview.html" class="caption">Bigger map</a></p>
+                
+                <div id="data">                   
+                    <h3>About the Data</h3>
+                    <ul>
+                        <li>Imagery<br/>
+                            <span class="data-details">Worldwide 15m color-corrected Landsat. 
+                            Derived from 
+                            <a href="http://www.landcover.org/data/">UMD Global Land Cover Facility</a>
+                            and <a href="http://www.nasa.gov/vision/earth/features/blue_marble.html">NASA BlueMarble-NG</a></span></li>
+                        <li>Elevation<br/>
+                            <span class="data-details">Worldwide 90m SRTM elevation data.
+                            Derived from <a href="http://www.landcover.org/data/">CGIAR-CSI SRTM</a></span></li>
+                        <li>Street Map<br/>
+                            <span class="data-details">Worldwide overlay of street vectors and labels.
+                            Derived from <a href="http://openstreetmap.org">OpenStreetMap</a>.</span></li>
+                    </ul>
+                </div>
+                
+                <hr style="margin-top:2em"/>
+            
+                <div id="readymap_com">
+                    <a href="http://readymap.com">
+                        <img src="http://readymap.org/readymap-400.png" width="188" border="0"/>
+                    </a>
+                    <p>Globe SDK for JavaScript/WebGL</p>
+                </div>
+                
+                <hr/>
+                
+                <div id="osgearth_org">
+                    <a href="http://osgearth.org">
+                        <img src="osgearth.gif" border="0"/>
+                    </a>
+                    <p>Globe SDK for C++</p>
+                </div>
+                
+                <hr/>
+                    
+            </div>
+            
+            <div id="support">
+                <h3>Professional Support</h3>
+                <p>
+                    Pelican Mapping offers 
+                    <a href="http://v2.pelicanmapping.com/?page_id=23">professional consulting </a> for osgEarth and ReadyMap users. Contact us for:
+                    <ul>
+                        <li>osgEarth or OpenSceneGraph development</li>
+                        <li>Data preparation or hosting services</li>
+                        <li>Using ReadyMap&reg; in a production environment</li>
+                        <li>Deploying your own ReadyMap&reg; server</li>
+                    </ul>
+                </p>
+            </div>   
+        </div>
+    </div>
+     
+    <div id="footer">
+        <p>All content is &copy; Copyright 2011 Pelican Mapping. ReadyMap&reg; is a registered trademark of Pelican Mapping.</p>
+    </div>
+    
+    <div id="dia" style="display:none;">
+        <p id="diatext">This is a test.</p>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+
+    var map;
+    
+	function initializeMap() {
+        var options = { numZoomLevels: 25, maxResolution:1.40625/2, controls:[new OpenLayers.Control.Navigation(), new OpenLayers.Control.ZoomPanel( {position: new OpenLayers.Pixel(10,10)} ),new OpenLayers.Control.LayerSwitcher()] };
+		map = new OpenLayers.Map( "main-map", options );
+        //map.addControl(new OpenLayers.Control.LayerSwitcher());
+        var layer0 = new OpenLayers.Layer.WMS( "Imagery", "http://readymap.org/readymap/tiles", {layers: "7", format: "image/jpeg"}, {isBaseLayer:true, tileSize: new OpenLayers.Size(256, 256) });
+        var dataExtents = [-180.0, -90.0, 180.0, 90.0]; layer0.dataExtents = new OpenLayers.Bounds(dataExtents[0], dataExtents[1], dataExtents[2], dataExtents[3]);
+		var layer1 = new OpenLayers.Layer.WMS("Street Map", "http://readymap.org/readymap/tiles", {layers: "35", format: "image/png"}, {isBaseLayer: false, tileSize: new OpenLayers.Size(256, 256) });
+        var dataExtents = [-180, -90, 180, 90]; layer1.dataExtents = new OpenLayers.Bounds(dataExtents[0], dataExtents[1], dataExtents[2], dataExtents[3]);
+        map.addLayers([layer0,layer1]);
+        map.zoomToMaxExtent();
+	}
+ 
+    window.onload = function() {
+        initializeMap();
+    }
+</script>
+
+</html>
